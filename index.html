@@ -1,6 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <style>
+    .perspective-container {
+      perspective: 1000px;
+      display: inline-block;
+    }
+  
+    .image-3d {
+      width: 300px;
+      height: auto;
+      transform: rotateY(20deg);
+      transition: transform 0.7s ease-in-out;
+      transform-style: preserve-3d;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      border-radius: 12px;
+    }
+  
+    .image-3d:hover {
+      transform: rotateY(0deg);
+    }
+  </style>
+  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DreamNAV - Smart Sleep Mask</title>
@@ -44,7 +65,8 @@
       </div>
     </div>
   </section>
-
+  
+  
   <!-- New Section Added -->
   <section id="special" class="section">
     <h2>What Makes DreamNAV Special</h2>
@@ -105,9 +127,16 @@
   </section>
 
   <section class="cta">
-    <h2>Experience Sleep Like Never Before</h2>
-    <a href="#contact">Contact Us</a>
+    <div class="cta-content">
+      <h2>Experience Sleep Like Never Before</h2>
+      <a href="#contact">Contact Us</a>
+    </div>
+  
+    <div class="cta-image-wrapper">
+      <img src="assets/dreamnav-preview.jpg" alt="DreamNAV Preview" class="cta-image" />
+    </div>
   </section>
+  
 
   <section id="testimonials" class="testimonials">
     <h2>What Users Say</h2>

@@ -14,7 +14,7 @@ body {
 
 /* Navbar */
 nav {
-  background-color: #111927;
+  background-color: linear-gradient(rgba(126, 138, 176, 0.8), rgba(10, 14, 26, 0.8));
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -218,7 +218,7 @@ footer img {
   }
 }
 .hero {
-  background: linear-gradient(rgba(10, 14, 26, 0.8), rgba(10, 14, 26, 0.8)),
+  background: linear-gradient(rgba(126, 138, 176, 0.8), rgba(10, 14, 26, 0.8)),
               url('assets/abcd.png') no-repeat center center/cover;
   padding: 7rem 2rem;
   text-align: center;
@@ -281,4 +281,70 @@ footer img {
 nav {
   position: relative; /* add if not present */
   z-index: 10; /* high enough to be above .hero::before */
+}
+.cta {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6rem 2rem;
+  border-radius: 12px;
+  margin: 3rem auto;
+  max-width: 1100px;
+  background-color: #162030;
+  overflow: visible;
+}
+
+.cta {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6rem 2rem;
+  border-radius: 12px;
+  margin: 3rem auto;
+  max-width: 1100px;
+  background-color: #162030;
+  overflow: visible;
+}
+
+.cta-content {
+  z-index: 2;
+  max-width: 50%;
+}
+
+/* Perspective container */
+.cta-image-wrapper {
+  position: absolute;
+  right: -15%;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  perspective: 1200px;
+  z-index: 1;
+}
+
+/* The actual 3D image with animation */
+.cta-image {
+  height: 100%;
+  object-fit: contain;
+  transform-style: preserve-3d;
+  transform: rotateY(-25deg) rotateX(5deg);
+  animation: float3D 6s ease-in-out infinite;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+/* 3D floating animation */
+@keyframes float3D {
+  0% {
+    transform: rotateY(-25deg) rotateX(5deg) translateY(0px);
+  }
+  50% {
+    transform: rotateY(-20deg) rotateX(3deg) translateY(-15px);
+  }
+  100% {
+    transform: rotateY(-25deg) rotateX(5deg) translateY(0px);
+  }
 }
