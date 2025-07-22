@@ -233,10 +233,52 @@ footer img {
   position: absolute;
   inset: 0;
   background: rgba(10, 14, 26, 0.6);
-  backdrop-filter: blur(2px);
+  /* Removed backdrop-filter to avoid blur */
   z-index: 0;
 }
+
 .hero h1, .hero p {
   position: relative;
   z-index: 1;
+}
+.section {
+  padding: 6rem 2rem;
+  max-width: 1100px;
+  margin: 3rem auto;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.card {
+  padding: 1rem;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card h3 {
+  color: #90e0d9;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: #cbd5e1;
+}
+nav {
+  position: relative; /* add if not present */
+  z-index: 10; /* high enough to be above .hero::before */
 }
