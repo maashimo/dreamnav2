@@ -12,7 +12,7 @@ body {
   line-height: 1.6;
 }
 .section h2 {
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Segoe UI', sans-serif;
   font-size: 3rem;
   color: #c1eae6;
   margin-bottom: 1.5rem;
@@ -104,7 +104,7 @@ nav ul li a:hover {
 
 
 .section h2 {
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Segoe UI', sans-serif;
   font-size: 3.5rem;
   color: #c1eae6;
   margin-bottom: 1.5rem;
